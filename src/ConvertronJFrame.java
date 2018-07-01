@@ -207,15 +207,15 @@ public class ConvertronJFrame extends JFrame {
         }
         if (cbxType.getSelectedIndex() == 2) {
             cbxFrom.setModel(new DefaultComboBoxModel<>(new String[] 
-                { "...", "Kilograms", "Grams", "Miligrams", "Pounds", "Ounces" }));
+                { "...", "Kilograms", "Grams", "Milligrams", "Pounds", "Ounces" }));
             cbxTo.setModel(new DefaultComboBoxModel<>(new String[] 
-                { "...", "Kilograms", "Grams", "Miligrams", "Pounds", "Ounces" }));
+                { "...", "Kilograms", "Grams", "Milligrams", "Pounds", "Ounces" }));
         }
         if (cbxType.getSelectedIndex() == 3) {
             cbxFrom.setModel(new DefaultComboBoxModel<>(new String[] 
-                { "...", "Liters", "Mililiters", "Gallons (US)", "Quarts" }));
+                { "...", "Liters", "Milliliters", "Gallons (US)", "Quarts" }));
             cbxTo.setModel(new DefaultComboBoxModel<>(new String[] 
-                { "...", "Liters", "Mililiters", "Gallons (US)", "Quarts" }));
+                { "...", "Liters", "Milliliters", "Gallons (US)", "Quarts" }));
         }
         if (cbxType.getSelectedIndex() == 4) {
             cbxFrom.setModel(new DefaultComboBoxModel<>(new String[] 
