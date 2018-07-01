@@ -1,3 +1,4 @@
+ // This is a test comment
 import java.awt.event.*;
 import java.text.NumberFormat;
 import javax.swing.ImageIcon;
