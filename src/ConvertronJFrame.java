@@ -10,7 +10,7 @@ public class ConvertronJFrame extends JFrame {
     
     static NumberFormat nf = NumberFormat.getNumberInstance();
     
-    public ConvertronJFrame() {
+    private ConvertronJFrame() {
         initComponents();
     }
 
@@ -62,11 +62,7 @@ public class ConvertronJFrame extends JFrame {
         });
 
         btnCalculate.setText("Calculate");
-        btnCalculate.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
-                btnCalculateActionPerformed(evt);
-            }
-        });
+        btnCalculate.addActionListener(evt -> btnCalculateActionPerformed(evt));
         btnCalculate.addKeyListener(new KeyAdapter() {
             public void keyPressed(KeyEvent evt) {
                 btnCalculateKeyPressed(evt);
@@ -325,18 +321,12 @@ public class ConvertronJFrame extends JFrame {
             txtOutput.setText("select a \'To\' measurement");
             cbxTo.requestFocus();
         } else {
-        
             try {
                 double input = parseDouble(txtInput.getText());
-
                 switch (cbxType.getSelectedIndex()) {
-                    
                     case 1: // Distance
-                        
                         switch (cbxFrom.getSelectedIndex()) {
-                        
                             case 1: // Kilometers
-                            
                                 if (cbxTo.getSelectedIndex() == 1)
                                     txtOutput.setText(nf.format(input) + "km");
                                 if (cbxTo.getSelectedIndex() == 2)
@@ -352,9 +342,7 @@ public class ConvertronJFrame extends JFrame {
                                 if (cbxTo.getSelectedIndex() == 7)
                                     txtOutput.setText(nf.format(input * 39370.1) + "in");
                                 break;
-                                
                             case 2: // Meters
-                                
                                 if (cbxTo.getSelectedIndex() == 1)
                                     txtOutput.setText(nf.format(input / 1000) + "km");
                                 if (cbxTo.getSelectedIndex() == 2)
@@ -370,9 +358,7 @@ public class ConvertronJFrame extends JFrame {
                                 if (cbxTo.getSelectedIndex() == 7)
                                     txtOutput.setText(nf.format(input * 39.3701) + "in");
                                 break;
-                                
                             case 3: // Centimeters
-                                
                                 if (cbxTo.getSelectedIndex() == 1)
                                     txtOutput.setText(nf.format(input / 100000) + "km");
                                 if (cbxTo.getSelectedIndex() == 2)
@@ -388,9 +374,7 @@ public class ConvertronJFrame extends JFrame {
                                 if (cbxTo.getSelectedIndex() == 7)
                                     txtOutput.setText(nf.format(input / 2.54) + "in");
                                 break;
-                                
                             case 4: // Miles
-                                
                                 if (cbxTo.getSelectedIndex() == 1)
                                     txtOutput.setText(nf.format(input * 1.60934) + "km");
                                 if (cbxTo.getSelectedIndex() == 2)
@@ -406,9 +390,7 @@ public class ConvertronJFrame extends JFrame {
                                 if (cbxTo.getSelectedIndex() == 7)
                                     txtOutput.setText(nf.format(input * 63360) + "in");
                                 break;
-                                
                             case 5: // Yards
-                                
                                 if (cbxTo.getSelectedIndex() == 1)
                                     txtOutput.setText(nf.format(input / 1093.61) + "km");
                                 if (cbxTo.getSelectedIndex() == 2)
@@ -424,9 +406,7 @@ public class ConvertronJFrame extends JFrame {
                                 if (cbxTo.getSelectedIndex() == 7)
                                     txtOutput.setText(nf.format(input * 36) + "in");
                                 break;
-                                
                             case 6: // Feet
-                                
                                 if (cbxTo.getSelectedIndex() == 1)
                                     txtOutput.setText(nf.format(input / 3280.84) + "km");
                                 if (cbxTo.getSelectedIndex() == 2)
@@ -442,9 +422,7 @@ public class ConvertronJFrame extends JFrame {
                                 if (cbxTo.getSelectedIndex() == 7)
                                     txtOutput.setText(nf.format(input * 12) + "in");
                                 break;
-                                
                             case 7: // Inches
-                                
                                 if (cbxTo.getSelectedIndex() == 1)
                                     txtOutput.setText(nf.format(input / 39370.1) + "km");
                                 if (cbxTo.getSelectedIndex() == 2)
@@ -461,16 +439,11 @@ public class ConvertronJFrame extends JFrame {
                                     txtOutput.setText(nf.format(input) + "in");
                                 break;
                         }
-                        
                         btnClose.requestFocus();
                         break;
-                
                     case 2: // Weight
-                        
                         switch (cbxFrom.getSelectedIndex()) {
-                        
                             case 1: // Kilograms
-                            
                                 if (cbxTo.getSelectedIndex() == 1)
                                     txtOutput.setText(nf.format(input) + "kg");
                                 if (cbxTo.getSelectedIndex() == 2)
@@ -482,9 +455,7 @@ public class ConvertronJFrame extends JFrame {
                                 if (cbxTo.getSelectedIndex() == 5)
                                     txtOutput.setText(nf.format(input * 35.274) + "oz");
                                 break;
-                                
                             case 2: // grams
-                                
                                 if (cbxTo.getSelectedIndex() == 1)
                                     txtOutput.setText(nf.format(input / 1000) + "kg");
                                 if (cbxTo.getSelectedIndex() == 2)
@@ -496,9 +467,7 @@ public class ConvertronJFrame extends JFrame {
                                 if (cbxTo.getSelectedIndex() == 5)
                                     txtOutput.setText(nf.format(input / 28.3495) + "oz");
                                 break;
-                                
                             case 3: // pounds
-                                
                                 if (cbxTo.getSelectedIndex() == 1)
                                     txtOutput.setText(nf.format(input / 2.20462) + "kg");
                                 if (cbxTo.getSelectedIndex() == 2)
@@ -510,9 +479,7 @@ public class ConvertronJFrame extends JFrame {
                                 if (cbxTo.getSelectedIndex() == 5)
                                     txtOutput.setText(nf.format(input * 16) + "oz");
                                 break;
-                                
                             case 4: // ounces
-                                
                                 if (cbxTo.getSelectedIndex() == 1)
                                     txtOutput.setText(nf.format(input / 35.274) + "kg");
                                 if (cbxTo.getSelectedIndex() == 2)
@@ -525,13 +492,10 @@ public class ConvertronJFrame extends JFrame {
                                     txtOutput.setText(nf.format(input) + "oz");
                                 break;
                         }
-                        
                         btnClose.requestFocus();
                         break;
-                
                     case 3: // Volume
                         switch (cbxFrom.getSelectedIndex()) {
-
                             case 1:
                                 if (cbxTo.getSelectedIndex() == 1)
                                     txtOutput.setText(nf.format(input) + "L");
@@ -542,7 +506,6 @@ public class ConvertronJFrame extends JFrame {
                                 if (cbxTo.getSelectedIndex() == 4)
                                     txtOutput.setText(nf.format(input * 1.05669) + "qt");
                                 break;
-                                
                             case 2:
                                 if (cbxTo.getSelectedIndex() == 1)
                                     txtOutput.setText(nf.format(input / 1000) + "L");
@@ -553,7 +516,6 @@ public class ConvertronJFrame extends JFrame {
                                 if (cbxTo.getSelectedIndex() == 4)
                                     txtOutput.setText(nf.format(input / 946.353) + "qt");
                                 break;
-                                
                             case 3:
                                 if (cbxTo.getSelectedIndex() == 1)
                                     txtOutput.setText(nf.format(input * 3.78541) + "L");
@@ -564,7 +526,6 @@ public class ConvertronJFrame extends JFrame {
                                 if (cbxTo.getSelectedIndex() == 4)
                                     txtOutput.setText(nf.format(input * 4) + "qt");
                                 break;
-                                
                             case 4:
                                 if (cbxTo.getSelectedIndex() == 1)
                                     txtOutput.setText(nf.format(input / 1.05669) + "L");
@@ -575,42 +536,32 @@ public class ConvertronJFrame extends JFrame {
                                 if (cbxTo.getSelectedIndex() == 4)
                                     txtOutput.setText(nf.format(input) + "qt");
                                 break;
-                                
                         }
                         btnClose.requestFocus();
                         break;
-                
                     case 4: // Temperature
-                        
                         switch (cbxFrom.getSelectedIndex()) {
-
                             case 1:
-                        
                                 if (cbxTo.getSelectedIndex() == 1)
-                                    txtOutput.setText(nf.format(input) + "*C");
+                                    txtOutput.setText(nf.format(input) + "°C");
                                 if (cbxTo.getSelectedIndex() == 2)
-                                    txtOutput.setText(nf.format(input * 1.8 + 32) + "*F");
+                                    txtOutput.setText(nf.format(input * 1.8 + 32) + "°F");
                                 break;
-                            
                             case 2:
-                                
                                 if (cbxTo.getSelectedIndex() == 1)
-                                    txtOutput.setText(nf.format((input - 32) / 1.8) + "*C");
+                                    txtOutput.setText(nf.format((input - 32) / 1.8) + "°C");
                                 if (cbxTo.getSelectedIndex() == 2)
-                                    txtOutput.setText(nf.format(input) + "*F");
+                                    txtOutput.setText(nf.format(input) + "°F");
                                 break;
                         }
-                        
                         btnClose.requestFocus();
                         break;
                 }
-                
             } catch (NumberFormatException ex) {
                 txtOutput.setText("enter a value to convert");
                 txtInput.requestFocus();
             }
         }
     }
-
 }
 
