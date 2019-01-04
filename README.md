@@ -23,7 +23,7 @@ In order to run the program, Java SE Runtime Environment 8 or higher must be ins
 - For Linux users, extract the `convertron.jar` file from the archive, and execute with the following commands.
     
       tar -xvjf convertron-1.0.tar.bz2
-      java -jar convertron/bin/convertron.jar
+      java -jar convertron/convertron.jar
 
 ### :key: Licence
 
