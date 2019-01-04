@@ -13,9 +13,9 @@ In order to run the program, Java SE Runtime Environment 8 or higher must be ins
 - Need help installing Java? Read [this document](https://www.java.com/en/download/help/download_options.xml "Java Installation Instructions") for installation instructions.
 
 ### :open_file_folder: Downloads
-- Windows executable binary: [convertron-1.0.rar](https://beatzz.co/downloads/java/blackjack/convertron-1.0.rar "convertron-1.0.rar")
+- Windows executable binary: [convertron-1.0.rar](https://beatzz.co/downloads/java/convertron/convertron-1.0.rar "convertron-1.0.rar")
 
-- Linux executable jar: [convertron-1.0.tar.bz2](https://beatzz.co/downloads/java/blackjack/convertron-1.0.tar.bz2 "convertron-1.0.tar.bz2")
+- Linux executable jar: [convertron-1.0.tar.bz2](https://beatzz.co/downloads/java/convertron/convertron-1.0.tar.bz2 "convertron-1.0.tar.bz2")
 
 ### :computer: Execution
 

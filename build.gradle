@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'idea'
+}
+
+version '1.0'
+
+mainClassName = 'ConvertronJFrame'
+
+sourceSets.main.java.srcDirs = ['src']
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+jar {
+    manifest {
+        attributes (
+                'Class-Path': configurations.compile.collect {it.getName() }.join(' '),
+                'Main-Class': 'ConvertronJFrame',
+                'Implementation-Title': 'Gradle',
+                'Implementation-Version': version
+        )
+    }
+}
+
+uploadArchives {
+    repositories {
+        flatDir {
+            dirs 'repos'
+        }
+    }
+}
